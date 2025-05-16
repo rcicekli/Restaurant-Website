@@ -111,7 +111,7 @@ export default class Etkinlik extends Component {
             <div>
               <div className="row justify-content-center m-5">
                 <div className=" col-md-4 col-lg-4 col-xl-4 col-sm-12 m-5">
-                  <div className="  card text-black bg-transparent border-0 ">
+                  <div className="  card  bg-transparent border-0 ">
                     <img
                       src={etkinlik1}
                       className=" rounded rounded-5"
@@ -127,7 +127,7 @@ export default class Etkinlik extends Component {
                 </div>
 
                 <div className="col-md-4 col-lg-4 col-xl-4  col-sm-12  m-5 ">
-                  <div className="  card text-black bg-transparent border-0 ">
+                  <div className="  card  bg-transparent border-0 ">
                     <img
                       src={etkinlik2}
                       className=" rounded rounded-5"
@@ -144,7 +144,7 @@ export default class Etkinlik extends Component {
               </div>
               <div className="row justify-content-center m-5">
                 <div className="col-md-4 col-lg-4 col-xl-4  col-sm-12  m-5">
-                  <div className=" card text-black bg-transparent border-0 ">
+                  <div className=" card  bg-transparent border-0 ">
                     <img
                       src={etkinlik3}
                       className=" rounded rounded-5  img-fluid"
@@ -160,7 +160,7 @@ export default class Etkinlik extends Component {
                 </div>
 
                 <div className="col-md-4 col-lg-4 col-xl-4 col-sm-12  m-5">
-                  <div className=" card text-black bg-transparent border-0 ">
+                  <div className=" card  bg-transparent border-0 ">
                     <img
                       src={etkinlik4}
                       className=" rounded rounded-5 img-fluid"
@@ -183,7 +183,7 @@ export default class Etkinlik extends Component {
                     fontSize: "20px",
                     backgroundColor: "rgba(36, 28, 20, 0.10)",
                   }}
-                  className="p-3 text-uppercase text-black"
+                  className="p-3 text-uppercase"
                 >
                   hemen rezervasyon yap <FaCheck />
                 </Button>{" "}

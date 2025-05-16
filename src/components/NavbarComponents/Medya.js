@@ -36,7 +36,7 @@ export default class Medya extends Component {
           >
             <section>
               <div
-                className="rounded-5"
+                className="mx-5 mb-5 rounded-5"
                 style={{ backgroundColor: " rgba(255, 255, 255, 0.20)" }}
               >
                 <div className="row justify-content-center">

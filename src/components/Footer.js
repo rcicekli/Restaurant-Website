@@ -76,12 +76,12 @@ function Footer(args) {
             Abone Ol
           </a>
 
-          <div className="mt-2 mx-3">
-            <FaFacebook className="ikonlar mx-2 text-info " />
-            <FaInstagram className="ikonlar mx-2 text-danger " />
+          <div className="mt-2 mx-1">
+            <FaFacebook className="ikonlar mx-1 text-info " />
+            <FaInstagram className="ikonlar mx-1 text-danger " />
 
-            <FaTwitter className="ikonlar mx-2 text-info " />
-            <FaGoogle className="ikonlar mx-2 text-warning " />
+            <FaTwitter className="ikonlar mx-1 text-info " />
+            <FaGoogle className="ikonlar mx-1  text-warning " />
           </div>
         </Col>{" "}
       </Row>

@@ -67,7 +67,7 @@ function Footer(args) {
         </Col>
         <Col className=" p-3 ms-auto d-flex justify-content-center" sm={4} md={2} xs={4}>
           <a
-            href="https://www.youtube.com/channel/UCc_aQ56OI4B-sjb4GbWBjQA?app=desktop"
+            href="https://github.com/rcicekli"
             target="_blank"
             rel="noreferrer"
             className="abone  p-2 rounded-2 bg-transparent text-decoration-none text-uppercase fw-bold m-1 "

@@ -22,7 +22,7 @@ export default class Social extends Component {
               style={{ fontFamily: "Oswald" }}
               className="fs-2 fw-bold text-uppercase mb-5 mt-5"
             >
-              Yolculuğumuzu Takip Edin <a className="takip text-lowercase" rel="noreferrer" target="_blank" href="https://www.youtube.com/channel/UCc_aQ56OI4B-sjb4GbWBjQA?app=desktop"><u>@food</u></a>
+              Yolculuğumuzu Takip Edin <a className="takip text-lowercase" rel="noreferrer" target="_blank" href="https://github.com/rcicekli"><u>@food</u></a>
             </Label>
           </Row>
           <Row >

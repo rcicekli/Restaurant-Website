@@ -65,8 +65,8 @@ export default class Rezervasyon extends Component {
       >
         <MyNav />
 
-        <div className="mt-5 p-5">
-          <Row className="mx-auto p-5 m-5">
+        <div className="mt-5">
+          <Row className="mx-auto py-5 m-5">
             <Col
               className="p-5 rounded-start"
               style={{ backgroundColor: " rgba(255, 255, 255, 0.57)" }}

@@ -41,9 +41,9 @@ export default class İletisim extends Component {
 
         <div className="container my-5">
           <div
-            className="p-4 p-md-5 rounded-4"
+            className="p-2 p-md-5 rounded-4"
             style={{ 
-              marginTop:"150px",
+              marginTop:"75px",
               backgroundColor: "rgba(255, 255, 255, 0.33)" }}
           >
             <form onSubmit={this.handleSubmit}>

@@ -28,7 +28,7 @@ export default class Kariyer extends Component {
       <div
         className="min-vh-100 d-flex flex-column"
         style={{
-          marginTop:"120px",
+          marginTop:"75px",
           backgroundImage: `url(${karakalem})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "bottom right",
@@ -39,7 +39,7 @@ export default class Kariyer extends Component {
 
         <div className="container flex-grow-1 py-5">
           <div
-            className="p-4 p-md-5 rounded-5"
+            className="p-2 p-md-5 rounded-5"
             style={{ backgroundColor: "rgba(255, 255, 255, 0.33)" }}
           >
             <form onSubmit={this.handleSubmit}>

@@ -30,18 +30,18 @@ export default class GoRezervasion extends Component {
                 Eşsiz Yemeklerin Arkasındaki Şeflere Bağlanın
               </h2>
 
-              <p style={{ fontFamily: "Daktilo" }}>
+              <p style={{ fontFamily: "Daktilo", fontSize: "16px", maxWidth: "100%" }}>
                 <span style={{ fontFamily: "Alpha", fontSize: "30px" }}>food</span>, birbirinden ünlü şefler ve onların harika menüleri ile size unutamayacağınız deneyimler yaşatıyor.
               </p>
 
-              <p style={{ fontFamily: "Daktilo" }}>
+              <p style={{ fontFamily: "Daktilo", fontSize: "16px" }}>
                 Aşağıdan veya buradan özel davet oluşturabilirsiniz.
               </p>
 
               <Link to="/menu">
                 <Button
                   className="mt-4 border border-dark text-uppercase bg-transparent px-4 py-2"
-                  style={{ fontFamily: "Daktilo" }}
+                  style={{ fontFamily: "Daktilo", fontSize: "14px" }}
                 >
                   Yemekleri Gör
                 </Button>
@@ -49,12 +49,16 @@ export default class GoRezervasion extends Component {
             </Col>
 
             {/* Image Section */}
-            <Col xs={12} md={6}>
+            <Col xs={12} md={6} className="d-flex justify-content-center">
               <img
                 src={steak}
                 alt="Steak"
                 className="img-fluid rounded-3"
-                style={{ objectFit: "cover", width: "100%" }}
+                style={{
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "auto",
+                }}
               />
             </Col>
           </Row>

@@ -60,8 +60,8 @@ function MyNav(args) {
           >
             food
           </NavbarBrand>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
+          <NavbarToggler style={{backgroundColor: "#e9e9e9"}} onClick={toggle} />
+          <Collapse className="text-center" isOpen={isOpen} navbar>
             <Nav
               className="ms-auto fw-bold "
               style={{ fontFamily: "Panton", fontSize: "17px" }}

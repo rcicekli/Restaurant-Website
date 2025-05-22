@@ -1,21 +1,50 @@
 import React, { Component } from "react";
-import { Label, Row } from "reactstrap";
+import { Label, Row, Col } from "reactstrap";
 import MyNav from "./MyNav";
+import Footer from "../Footer";
+
 import nytimes from "../../assets/nytimes.png";
 import cnn from "../../assets/cnn.png";
 import fox from "../../assets/fox.png";
 import usatoday from "../../assets/usatoday.png";
 import spiegel from "../../assets/spiegel.png";
-import Footer from "../Footer";
 import cnn2 from "../../assets/cnn2.png";
 
 export default class Medya extends Component {
   render() {
+    // Medya öğeleri için tek dizi
+    const medyaItems = [
+      {
+        img: nytimes,
+        comment: `"New York'da hemen bir şube açmalı.."`,
+      },
+      {
+        img: usatoday,
+        comment: `"Bugüne kadar böyle lezzetli yemek yemediğinize eminiz.."`,
+      },
+      {
+        img: fox,
+        comment: `"Food Steak House. Tartışmasız bir numara.."`,
+      },
+      {
+        img: cnn2,
+        comment: `"Bayıldık..."`,
+      },
+      {
+        img: spiegel,
+        comment: `"Almanya’daki en muhteşem yer..."`,
+      },
+      {
+        img: cnn,
+        comment: `"Harika bir deneyim"`,
+      },
+    ];
+
     return (
-      <div className="container-fluid min-vh-100 d-flex flex-column">
+      <div className="container-fluid d-flex flex-column min-vh-100 p-0">
         <MyNav />
 
-        <div className="mx-auto mt-5 p-5">
+        <div className="text-center mt-5 p-3">
           <Label
             style={{ fontFamily: "Oswald" }}
             className="text-uppercase fw-bold fs-3"
@@ -23,126 +52,38 @@ export default class Medya extends Component {
             Medyada Biz
           </Label>
         </div>
-        <Row>
-          <div
-            className=" align-items-start  align-items-center justify-content-center"
-            style={{
-              objectFit: "cover",
-              backgroundRepeat: "repeat-y",
-              backgroundPositionX: "-46%",
-              backgroundPositionY: "60%",
-              backgroundSize: "45%",
-            }}
-          >
-            <section>
-              <div
-                className="mx-5 mb-5 rounded-5"
-                style={{ backgroundColor: " rgba(255, 255, 255, 0.20)" }}
+
+        <div className="container my-3 flex-grow-1">
+          <Row className="g-4 justify-content-center">
+            {medyaItems.map((item, index) => (
+              <Col
+                key={index}
+                xs={12}
+                sm={6}
+                md={6}
+                lg={6}
+                xl={4}
+                className="d-flex justify-content-center"
               >
-                <div className="row justify-content-center">
-                  <div className=" col-md-2 col-lg-2 col-xl-3 col-sm-12 m-5">
-                    <div className="  card text-black bg-transparent border-0 ">
-                      <img
-                        src={nytimes}
-                        className=" rounded rounded-5"
-                        alt="Apple Computer"
-                      />
-                      <Label
-                        style={{ fontFamily: "Daktilo" }}
-                        className="fw-bold text-uppercase mt-4 text-center "
-                      >
-                        "New york'da hemen bir şube açmalı.."
-                      </Label>
-                    </div>
-                  </div>
-
-                  <div className="col-md-2 col-lg-2 col-xl-3  col-sm-12  m-5 ">
-                    <div className="  card text-black bg-transparent border-0 ">
-                      <img
-                        src={usatoday}
-                        className=" rounded rounded-5"
-                        alt="Apple Computer"
-                      />
-                      <Label
-                        style={{ fontFamily: "Daktilo" }}
-                        className="fw-bold text-uppercase mt-3 text-center "
-                      >
-                        "Bugüne kadar böyle lezzetli yemek yemediğinize miniz.."
-                      </Label>
-                    </div>
-                  </div>
-                  <div className="col-md-2 col-lg-2 col-xl-3  col-sm-12  m-5 ">
-                    <div className="  card text-black bg-transparent border-0 ">
-                      <img
-                        src={fox}
-                        className=" rounded rounded-5"
-                        alt="Apple Computer"
-                      />
-                      <Label
-                        style={{ fontFamily: "Daktilo" }}
-                        className="fw-bold text-uppercase mt-5 text-center "
-                      >
-                        "food steak house. Tartışmasız bir numara.."
-                      </Label>
-                    </div>
-                  </div>
+                <div className="card text-black bg-transparent border-0 w-100 p-2">
+                  <img
+                    src={item.img}
+                    alt={`media-${index}`}
+                    className="img-fluid rounded-5"
+                  />
+                  <Label
+                    style={{ fontFamily: "Daktilo" }}
+                    className="fw-bold text-uppercase mt-3 text-center d-block"
+                  >
+                    {item.comment}
+                  </Label>
                 </div>
-
-                <div className="row justify-content-center ">
-                  <div className="col-md-2 col-lg-2 col-xl-3  col-sm-12  m-5 ">
-                    <div className="  card text-black bg-transparent border-0">
-                      <img
-                        src={cnn2}
-                        className=" rounded rounded-5"
-                        alt="Apple Computer"
-                      />
-                      <Label
-                        style={{ fontFamily: "Daktilo" }}
-                        className="fw-bold text-uppercase text-center"
-                      >
-                        "Bayıldık..."
-                      </Label>
-                    </div>
-                  </div>
-
-                  <div className="col-md-2 col-lg-2 col-xl-3 col-sm-12  m-5">
-                    <div className=" card text-black bg-transparent border-0  ">
-                      <img
-                        src={spiegel}
-                        className=" rounded rounded-5 "
-                        alt="Apple Computer"
-                      />
-                      <Label
-                        style={{ fontFamily: "Daktilo" }}
-                        className="fw-bold text-uppercase text-center"
-                      >
-                        "Almanyadaki en muhteşem yer..."
-                      </Label>
-                    </div>
-                  </div>
-                  <div className="col-md-2 col-lg-2 col-xl-3  col-sm-12  m-5 ">
-                    <div className="  card text-black bg-transparent border-0">
-                      <img
-                        src={cnn}
-                        className=" rounded rounded-5"
-                        alt="Apple Computer"
-                      />
-                      <Label
-                        style={{ fontFamily: "Daktilo" }}
-                        className="fw-bold text-uppercase text-center"
-                      >
-                        "Harika Bir deneyim"
-                      </Label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </Row>
-        <div className="row fixed-bottom">
-          <Footer />
+              </Col>
+            ))}
+          </Row>
         </div>
+
+        <Footer />
       </div>
     );
   }

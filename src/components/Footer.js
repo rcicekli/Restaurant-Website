@@ -1,91 +1,69 @@
-import React, { useState } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-
-  Row,
-  Col,
-} from "reactstrap";
+import React from "react";
 import { FaInstagram, FaFacebook, FaTwitter, FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-function Footer(args) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
+function Footer() {
   const navigate = useNavigate();
-  const Gitİletisim = () => {
-    navigate(`/iletisim`);
-  };
 
-  const GitKariyer = () => {
-    navigate(`/kariyer`);
-  };
-
-  const GitGizlilik = () => {
-    navigate(`/gizlilik`);
-  };
+  const Gitİletisim = () => navigate("/iletisim");
+  const GitKariyer = () => navigate("/kariyer");
+  const GitGizlilik = () => navigate("/gizlilik");
 
   return (
-    <div className="myfooter">
-      <Row className="w-100 ">
-        <Col className="p-3" sm={4} md={4} xs={4}>
-          <Navbar
-            {...args}
-            expand="md"
-            style={{
-              fontSize: "13px",
-            }}
-            className="position-relative fixed-bottom "
+    <footer className="bg-dark text-white p-2 mt-5">
+      <div className="container">
+        <div className="row align-items-center text-center text-md-start">
+          {/* Sol Menü */}
+          <div  style={{ fontFamily: "Regular" }} className="col-12 col-md-6 mb-3 mb-md-0"
           >
-      
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar >
-              <Nav
-                className=" fw-bold "
-                style={{ fontFamily: "Regular" }}
-                navbar
-              >
-                <div className=" foot mx-2  ">
-                  <div onClick={Gitİletisim} >
-                    iletisim
-                  </div>
-                </div>
-                <div onClick={GitKariyer} className="foot mx-2  ">
-                  <div >kariyer</div>
-                </div>
-                <div onClick={GitGizlilik} className=" foot mx-2 ">
-                  <div >
-                    Gizlilik sozlesmesi
-                  </div>
-                </div>
-              </Nav>
-            </Collapse>
-          </Navbar>
-        </Col>
-        <Col className=" p-3 ms-auto d-flex justify-content-center" sm={4} md={2} xs={4}>
-          <a
-            href="https://github.com/rcicekli"
-            target="_blank"
-            rel="noreferrer"
-            className="abone  p-2 rounded-2 bg-transparent text-decoration-none text-uppercase fw-bold m-1 "
-         
-          >
-            Abone Ol
-          </a>
-
-          <div className="mt-2 mx-1">
-            <FaFacebook className="ikonlar mx-1 text-info " />
-            <FaInstagram className="ikonlar mx-1 text-danger " />
-
-            <FaTwitter className="ikonlar mx-1 text-info " />
-            <FaGoogle className="ikonlar mx-1  text-warning " />
+            <ul className="nav flex-column flex-md-row justify-content-center justify-content-md-start ">
+              <li className="nav-item mx-2">
+                <span
+                  className=" foot nav-link text-white p-0 cursor-pointer"
+                  onClick={Gitİletisim}
+                >
+                  İletişim
+                </span>
+              </li>
+              <li className=" foot nav-item mx-2">
+                <span
+                  className="nav-link text-white p-0 cursor-pointer"
+                  onClick={GitKariyer}
+                >
+                  Kariyer
+                </span>
+              </li>
+              <li className="foot nav-item mx-2">
+                <span
+                  className="nav-link text-white p-0 cursor-pointer"
+                  onClick={GitGizlilik}
+                >
+                  Gizlilik Sözleşmesi
+                </span>
+              </li>
+            </ul>
           </div>
-        </Col>{" "}
-      </Row>
-    </div>
+
+          {/* Sağ Menü */}
+          <div className="col-12 col-md-6 d-flex flex-row align-items-center align-items-md-end gap-2 justify-content-center justify-content-md-end">
+            <a
+              href="https://github.com/rcicekli"
+              target="_blank"
+              rel="noreferrer"
+              className="abone btn btn-outline-light btn-sm text-uppercase"
+            >
+              Abone Ol
+            </a>
+            <div className=" d-flex gap-1 fs-4 justify-content-center align-items-center">
+              <FaFacebook className="ikonlar text-info" />
+              <FaInstagram className="ikonlar text-danger" />
+              <FaTwitter className="ikonlar text-info" />
+              <FaGoogle className="ikonlar text-warning" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }
 

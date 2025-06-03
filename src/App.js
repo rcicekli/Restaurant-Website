@@ -22,6 +22,7 @@ function App() {
         <GoRezervasion />
         <Social />
         <Footer />{" "}
+        
     </div>
   );
 }

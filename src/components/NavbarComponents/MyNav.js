@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { Toggle } from "../../components/Toggle";
 import { useDarkMode } from "../../styles/useDarkMode";
 import { GlobalStyles, lightTheme, darkTheme } from "../../styles/globalStyles";
-import  { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 
 function MyNav(args) {
   const [theme, toggleTheme] = useDarkMode();
@@ -46,7 +46,7 @@ function MyNav(args) {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <div >
+      <div>
         <Navbar
           {...args}
           expand="md"
@@ -60,11 +60,19 @@ function MyNav(args) {
           >
             food
           </NavbarBrand>
-          <NavbarToggler style={{backgroundColor: "#e9e9e9"}} onClick={toggle} />
-          <Collapse className="text-center" isOpen={isOpen} navbar>
+          <NavbarToggler
+            style={{ backgroundColor: "#e9e9e9" }}
+            onClick={toggle}
+          />
+          <Collapse className="text-center blur-collapse" isOpen={isOpen} navbar>
             <Nav
               className="ms-auto fw-bold "
-              style={{ fontFamily: "Panton", fontSize: "17px" }}
+              style={{
+                fontFamily: "Panton",
+                fontSize: "17px",
+                
+                
+              }}
               navbar
             >
               <NavItem>
@@ -74,23 +82,17 @@ function MyNav(args) {
                 </Container>
               </NavItem>
               <NavItem>
-                <NavLink
-                  className="raise mx-2 cursor:grab "
-                  onClick={GitBiz}
-                >
+                <NavLink className="raise mx-2 cursor:grab " onClick={GitBiz}>
                   Biz Kimiz
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="raise mx-2 " onClick={GitChef}>
-                  Şeflerimiz
+                 Ünlü Şeflerimiz
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink
-                  className="raise mx-2 "
-                  onClick={GitEtkinlik}
-                >
+                <NavLink className="raise mx-2 " onClick={GitEtkinlik}>
                   Özel Etkinlikler
                 </NavLink>
               </NavItem>
@@ -100,17 +102,17 @@ function MyNav(args) {
                 </NavLink>
               </NavItem>
             </Nav>
-
-            <Button
-              onClick={Gitrezervasyon}
-              style={{
-                fontSize: "15px",
-                backgroundColor: "rgba(36, 28, 20, 0.10)",
-              }}
-              className=" raise  p-3  "
-            >
-              REZERVASYON
-            </Button>
+              <Button
+                onClick={Gitrezervasyon}
+                style={{
+                  fontSize: "15px",
+                  backgroundColor: "rgba(36, 28, 20, 0.10)",
+                }}
+                className=" raise p-2 mb-2  "
+              >
+                REZERVASYON
+              </Button>
+          
           </Collapse>
         </Navbar>
       </div>

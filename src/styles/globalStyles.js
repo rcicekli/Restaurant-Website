@@ -48,8 +48,13 @@ export const GlobalStyles = createGlobalStyle`
 
   color: ${({ theme }) => theme.foottext};
 
+
 }
 .bizkimizbtn{
+  color: ${({ theme }) => theme.text};
+
+}
+  .medya{
   color: ${({ theme }) => theme.text};
 
 }
@@ -61,9 +66,11 @@ export const GlobalStyles = createGlobalStyle`
   background: ${({ theme }) => theme.son};
   color: ${({ theme }) => theme.text};
 
-
-
 }
+.yemekgor{
+color: ${({ theme }) => theme.text};
+}
+
 `;
 
 export const lightTheme = {

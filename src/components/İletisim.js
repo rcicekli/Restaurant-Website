@@ -1,10 +1,13 @@
-import React, { Component } from "react";
+import  { Component } from "react";
 import { Button } from "reactstrap";
 import MyNav from "./NavbarComponents/MyNav";
 import posta from "../assets/posta.png";
 import Footer from "../components/Footer";
 
 export default class İletisim extends Component {
+  componentDidMount() {
+  window.scrollTo(0, 0);
+}
   constructor(props) {
     super(props);
     this.state = { name: "", konu: "", telefon: "", email: "", mesaj: "" };
@@ -25,23 +28,27 @@ export default class İletisim extends Component {
       `İsim: ${this.state.name}\nKonu: ${this.state.konu}\nTelefon: ${this.state.telefon}\nEmail: ${this.state.email}\nMesaj: ${this.state.mesaj}`
     );
   }
+  
+ 
+  
 
   render() {
     return (
       <div
-        className="min-vh-100 d-flex flex-column"
+        className="min-vh-100 d-flex flex-column "
         style={{
           backgroundImage: `url(${posta})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
           backgroundPosition: "right bottom",
+          marginTop:"100px"
         }}
       >
         <MyNav />
 
-        <div className="container my-5">
+        <div className="container my-5 "style={{ paddingBottom: "100px" }}>
           <div
-            className="p-2 p-md-5 rounded-4"
+            className="p-2 p-md-5 rounded-4 p-4"
             style={{ 
               marginTop:"75px",
               backgroundColor: "rgba(255, 255, 255, 0.33)" }}

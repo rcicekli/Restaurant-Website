@@ -10,11 +10,11 @@ function Footer() {
   const GitGizlilik = () => navigate("/gizlilik");
 
   return (
-    <footer className="bg-dark text-white p-2 mt-5">
+    <footer className="bg-dark text-white p-1 mt-2">
       <div className="container">
         <div className="row align-items-center text-center text-md-start">
           {/* Sol Menü */}
-          <div  style={{ fontFamily: "Regular" }} className="col-12 col-md-6 mb-3 mb-md-0"
+          <div className="col-12 col-md-6 mb-1 mb-md-0"
           >
             <ul className="nav flex-column flex-md-row justify-content-center justify-content-md-start ">
               <li className="nav-item mx-2">
@@ -54,7 +54,7 @@ function Footer() {
             >
               Abone Ol
             </a>
-            <div className=" d-flex gap-1 fs-4 justify-content-center align-items-center">
+            <div className=" d-flex gap-2 fs-4 m-1 justify-content-center align-items-center">
               <FaFacebook className="ikonlar text-info" />
               <FaInstagram className="ikonlar text-danger" />
               <FaTwitter className="ikonlar text-info" />

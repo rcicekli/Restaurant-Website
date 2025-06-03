@@ -11,13 +11,13 @@ import spiegel from "../../assets/spiegel.png";
 import cnn2 from "../../assets/cnn2.png";
 
 export default class Medya extends Component {
+  componentDidMount() {
+  window.scrollTo(0, 0);
+}
   render() {
     // Medya öğeleri için tek dizi
     const medyaItems = [
-      {
-        img: nytimes,
-        comment: `"New York'da hemen bir şube açmalı.."`,
-      },
+      
       {
         img: usatoday,
         comment: `"Bugüne kadar böyle lezzetli yemek yemediğinize eminiz.."`,
@@ -38,10 +38,16 @@ export default class Medya extends Component {
         img: cnn,
         comment: `"Harika bir deneyim"`,
       },
+      {
+        img: nytimes,
+        comment: `"New York'da hemen bir şube açmalı.."`,
+      }
     ];
 
     return (
-      <div className="container-fluid d-flex flex-column min-vh-100 p-0">
+      <div
+      style={{marginTop:"100px"}}
+      className="container-fluid d-flex flex-column min-vh-100 p-0">
         <MyNav />
 
         <div className="text-center mt-5 p-3">
@@ -73,7 +79,7 @@ export default class Medya extends Component {
                   />
                   <Label
                     style={{ fontFamily: "Daktilo" }}
-                    className="fw-bold text-uppercase mt-3 text-center d-block"
+                    className="medya fw-bold text-uppercase mt-3 text-center d-block"
                   >
                     {item.comment}
                   </Label>

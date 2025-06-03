@@ -42,10 +42,13 @@ const slideNumberStyle = {
 };
 
 export default class Etkinlik extends Component {
+  componentDidMount() {
+  window.scrollTo(0, 0);
+}
   render() {
     return (
       <div className="App ">
-        <div style={{ textAlign: "center", backgroundColor: "#E8D4C3" }}>
+        <div style={{ textAlign: "center",marginTop:"100px", backgroundColor: "#E8D4C3" }}>
           <MyNav />
 
           <div

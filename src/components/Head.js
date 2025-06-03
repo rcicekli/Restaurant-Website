@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import video from "../assets/headvideo.mp4";
 
 export default class Head extends Component {
+  componentDidMount() {
+  window.scrollTo(0, 0);
+}
   render() {
     return (
       <div >

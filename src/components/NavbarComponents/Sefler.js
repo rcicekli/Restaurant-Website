@@ -14,6 +14,9 @@ import chef8 from "../../assets/chef8.jpg";
 import chef9 from "../../assets/chef9.jpg";
 
 export default class Sefler extends Component {
+  componentDidMount() {
+  window.scrollTo(0, 0);
+}
   render() {
     const chefs = [
       chef9, chef2, chef5,
@@ -34,6 +37,7 @@ export default class Sefler extends Component {
             backgroundPosition: "95% 50%",
             backgroundSize: "40%",
             backgroundAttachment: "fixed",
+            marginTop:"100px"
           }}
         >
           <section className="container py-4 px-3 px-md-5 rounded-5"

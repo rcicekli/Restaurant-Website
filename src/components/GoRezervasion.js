@@ -5,6 +5,9 @@ import karakalem from "../assets/karakalem.png";
 import { Link } from "react-router-dom";
 
 export default class GoRezervasion extends Component {
+  componentDidMount() {
+  window.scrollTo(0, 0);
+}
   render() {
     return (
       <div
@@ -40,7 +43,7 @@ export default class GoRezervasion extends Component {
 
               <Link to="/menu">
                 <Button
-                  className="mt-4 border border-dark text-uppercase bg-transparent px-4 py-2"
+                  className="yemekgor mt-4 border border-dark text-uppercase bg-transparent px-4 py-2 "
                   style={{ fontFamily: "Daktilo", fontSize: "14px" }}
                 >
                   Yemekleri Gör

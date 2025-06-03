@@ -3,6 +3,9 @@ import { Label, Row } from "reactstrap";
 import { MDBCol, MDBRow } from "mdb-react-ui-kit";
 
 export default class Social extends Component {
+    componentDidMount() {
+  window.scrollTo(0, 0);
+}
   render() {
     return (
       <div
@@ -15,7 +18,7 @@ export default class Social extends Component {
         }}
         className="w-100"
       >
-        <div className="container">
+        <div className="container p-5">
           <Row>
             <Label
               style={{ fontFamily: "Oswald" }}
@@ -35,7 +38,7 @@ export default class Social extends Component {
 
           <MDBRow>
             {/* İlk Kolon */}
-            <MDBCol lg={6} md={6} sm={12} className="mb-4">
+            <MDBCol lg={4} md={4} sm={12} className="mb-4">
               <img
                 src="https://picsum.photos/200/200"
                 className="w-100 shadow-1-strong rounded mb-4"
@@ -54,7 +57,7 @@ export default class Social extends Component {
             </MDBCol>
 
             {/* İkinci Kolon */}
-            <MDBCol lg={6} md={6} sm={12} className="mb-4">
+            <MDBCol lg={4} md={4} sm={12} className="mb-4">
               <img
                 src="https://picsum.photos/200/300"
                 className="w-100 shadow-1-strong rounded mb-4"
@@ -73,6 +76,23 @@ export default class Social extends Component {
             </MDBCol>
 
             {/* Üçüncü Kolon */}
+             <MDBCol lg={4} md={4} sm={12} className="mb-4">
+              <img
+                src="https://picsum.photos/200/200"
+                className="w-100 shadow-1-strong rounded mb-4"
+                alt="Mountains in the Clouds"
+              />
+              <img
+                src="https://picsum.photos/200/250"
+                className="w-100 shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+              />
+              <img
+                src="https://picsum.photos/200/350"
+                className="w-100 shadow-1-strong rounded mb-4"
+                alt="Yosemite National Park"
+              />
+            </MDBCol>
           
           </MDBRow>
         </div>

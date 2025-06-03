@@ -4,12 +4,16 @@ import MyNav from "./NavbarComponents/MyNav";
 import Footer from "../components/Footer";
 
 export default class Gizlilik extends Component {
+  componentDidMount() {
+  window.scrollTo(0, 0);
+}
   render() {
+    
     return (
       <div
         className="min-vh-100 d-flex flex-column"
         style={{
-          marginTop:"120px",
+          marginTop:"100px",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "right bottom",
           backgroundSize: "30%",

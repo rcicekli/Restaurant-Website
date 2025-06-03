@@ -6,9 +6,14 @@ import Footer from "../Footer";
 import { Link } from "react-router-dom";
 
 export default class BizKimiz extends Component {
+  componentDidMount() {
+  window.scrollTo(0, 0);
+}
   render() {
     return (
-      <div className="container-fluid min-vh-100 d-flex flex-column">
+      <div 
+      style={{marginTop:"100px"}}
+      className="container-fluid min-vh-100 d-flex flex-column">
         <div className="row">
           <div className="col">
             <MyNav />

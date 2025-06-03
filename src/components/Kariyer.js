@@ -5,6 +5,9 @@ import Footer from "../components/Footer";
 import karakalem from "../assets/karakalem.png";
 
 export default class Kariyer extends Component {
+  componentDidMount() {
+  window.scrollTo(0, 0);
+}
   constructor(props) {
     super(props);
     this.state = { name: "", telefon: "", email: "", mesaj: "" };
@@ -28,7 +31,7 @@ export default class Kariyer extends Component {
       <div
         className="min-vh-100 d-flex flex-column"
         style={{
-          marginTop:"75px",
+          marginTop:"100px",
           backgroundImage: `url(${karakalem})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "bottom right",
@@ -39,7 +42,7 @@ export default class Kariyer extends Component {
 
         <div className="container flex-grow-1 py-5">
           <div
-            className="p-2 p-md-5 rounded-5"
+            className="p-2 p-md-5 rounded-5 p-4"
             style={{ backgroundColor: "rgba(255, 255, 255, 0.33)" }}
           >
             <form onSubmit={this.handleSubmit}>

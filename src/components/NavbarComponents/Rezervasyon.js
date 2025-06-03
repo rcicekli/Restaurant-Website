@@ -6,6 +6,9 @@ import wine from "../../assets/wine.png";
 import Footer from "../Footer";
 
 export default class Rezervasyon extends Component {
+  componentDidMount() {
+  window.scrollTo(0, 0);
+}
   constructor(props) {
     super(props);
     this.state = {

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import { Label, Row, Col, Card, CardBody, CardTitle, CardText } from "reactstrap";
 import MyNav from "./NavbarComponents/MyNav";
 
 function Menu() {
+  
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   const current = new Date();
   const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
 
